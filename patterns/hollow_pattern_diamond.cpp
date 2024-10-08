@@ -1,5 +1,5 @@
 /*
-ake N (number of rows), print the following pattern (for N = 5).
+Take N (number of rows), print the following pattern (for N = 5).
 
      * * * * *
      * *   * *
@@ -30,7 +30,39 @@ int main()
     int n;
     cin>>n;
 
-    
+    int m=(n+1)/2;
+    int ie,je;
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=1;j<=n;j++)
+        {
+            if(i<=m)
+            {
+                ie=i;
+            }
+            else
+            {
+                ie=n-i+1;
+            }
+            if(j<=m)
+            {
+                je=j;
+            }
+            else
+            {
+                je=n-j+1;
+            }
+            if(ie+je<=m+1)
+            {
+                cout<<"*"<<"\t";
+            }
+            else
+            {
+                cout<<" "<<"\t";
+            }
+        }
+        cout<<endl;
+    }
 
     return 0;
 }
